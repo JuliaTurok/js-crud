@@ -1,0 +1,36 @@
+<div class="form shadow p-3 mb-5 bg-body-tertiary rounded w-50">
+    <h2 class="form__title">Інформація про товар</h2>
+
+    <form action="/product-edit" method="POST">
+        <div class="d-flex justify-content-between">
+            <div class="mb-3 w-50 me-3">
+                <label for="productName" class="form-label"> Назва товару</label>
+                <input type="text" class="form-control" id="productName" name="name" required>
+            </div>
+            <div class="mb-3 w-50 me-3">
+                <label for="priceAmount" class="form-label">Ціна</label>
+                <input type="number" class="form-control" id="priceAmount" name="price" required>
+            </div>
+            <div class="mb-3 w-50">
+                <label for="productId" class="form-label">ID</label>
+                <input type="number" class="form-control" id="productId" name="id">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="product-description">короткий опис товару</label>
+            <div class="form-floating mt-2">
+                <textarea id="product-description" name="description" class="form-control pt-3"
+                    placeholder="Додайте опис продукту тут"></textarea>
+
+            </div>
+
+            <small class="text-secondary">Відображується у картці товару</small>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary w-50 me-3">Зберегти оновлення</button>
+            <a href="/product-delete?id={{id}}" class="text-decoration-none btn btn-danger w-50 "> <button type="button"
+                    class="text-white">Видалити
+                    товар</button></a>
+        </div>
+    </form>
+</div>
