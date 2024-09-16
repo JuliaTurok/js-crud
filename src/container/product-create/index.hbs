@@ -1,0 +1,27 @@
+<div class="form shadow p-3 mb-5 bg-body-tertiary rounded w-50">
+    <h1 class="form__title">Інформація про товар</h1>
+
+    <form action="/product-create" method="POST">
+        <div class="d-flex justify-content-between ">
+            <div class="mb-3 w-50 me-3">
+                <label for="productName" class="form-label"> Назва товару</label>
+                <input type="text" class="form-control" id="productName" name="name" required>
+            </div>
+            <div class="mb-3 w-50">
+                <label for="priceAmount" class="form-label">Ціна</label>
+                <input type="number" class="form-control" id="priceAmount" name="price" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="product-description">короткий опис товару</label>
+            <div class="form-floating mt-2">
+                <textarea id="product-description" name="description" class="form-control pt-3"
+                    placeholder="Додайте опис продукту тут"></textarea>
+
+            </div>
+
+            <small class="text-secondary">Відображається у картці товару</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Створити товар</button>
+    </form>
+</div>

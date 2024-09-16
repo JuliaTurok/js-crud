@@ -1,0 +1,24 @@
+{{#with data.products}}
+{{#if isEmpty}}
+<mark>Пустий</mark>
+{{else}}
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2">
+
+    {{#each list}}
+    <div class="col">
+        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+            <div class="card-body p-2">
+                <h3 class=" card-title mb-3">{{name}} </h3>
+                <p class="card-text">{{#if description}}{{description}}{{else}}<mark>Немає опису</mark>{{/if}} </p>
+                <p href="#" class="card-link text-secondary">ID:{{id}}</p>
+                <div class="d-flex justify-content-between">
+                    <h4 class="product-price ">{{price}}₴</h4>
+                    <a href="/product-edit?id={{id}}" class="card-link btn text-primary" type="reset"> Редагувати</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+{{/with}}
