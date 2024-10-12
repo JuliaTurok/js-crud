@@ -1,0 +1,15 @@
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/purchase-card/style.scss' as
+  purchase-card;
+@use '../../lib/service.scss' as s;
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: s.space(5);
+}
+.button-change {
+  max-width: 100%;
+  width: 100%;
+}

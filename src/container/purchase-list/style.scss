@@ -1,0 +1,11 @@
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/purchase-card/style.scss' as
+  purchase-card;
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+}
