@@ -1,0 +1,68 @@
+<main class="main">
+    <div class="card" style="width: 50vw;">
+        <div class="card-body">
+            {{> heading title="Інформація про замовлення" }}
+
+            {{#with data}}
+            <div class="p-3">
+                <div>ID:</div>
+                <div>{{id}}</div>
+            </div>
+            {{> divider}}
+            <div class="row row-cols-lg-5 g-3 p-3">
+                <div class="col-6 d-flex flex-column justify-content-evenly">
+                    <div class="info-title">Ім'я</div>
+                    <div class="info">{{firstname}}</div>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-evenly">
+                    <div class="info-title">Прізвище</div>
+                    <div class="info">{{lastname}}</div>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-evenly">
+                    <div class="info-title">Телефон</div>
+                    <div class="info">{{phone}}</div>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-evenly">
+                    <div class="info-title">Електронна пошта:</div>
+                    <div class="info">{{email}}</div>
+                </div>
+            </div>
+            {{> divider}}
+            <div class="row row-cols-lg-5 g-3 p-3">
+                <div class="col-6 d-flex flex-column justify-content-evenly">
+                    <div class="info-title"> Назва товару</div>
+                    <div class="info">{{product}}</div>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-evenly">
+                    <div class="info-title">Коментар</div>
+                    <div class="info">{{#if comment}}{{commment}}{{else}} Немає коментарів {{/if}}</div>
+                </div>
+            </div>
+            {{> divider}}
+            <div class="row row-cols-lg-5 g-3 p-3">
+                <div class="col-6 d-flex flex-column justify-content-evenly">
+                    <div class="info-title">Вартість товарів:</div>
+                    <div class="info">{{productPrice}}₴</div>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-evenly">
+                    <div class="info-title">Вартість доставки:</div>
+                    <div class="info">{{deliveryPrice}}₴</div>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-evenly">
+                    <div class="info-title">Сума до сплати:</div>
+                    <div class="info">{{totalPrice}}₴</div>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-evenly">
+                    <div class="info-title">Нараховані бонуси:</div>
+                    <div class="info">{{bonusAmount}}₴</div>
+                </div>
+            </div>
+            {{> divider}}
+            <div class="d-flex justify-content-center align-items-center m-3">
+                <a href="/update-info?id={{id}}" class="btn btn-primary button-change">Змінити дані</a>
+            </div>
+
+            {{/with}}
+        </div>
+    </div>
+</main>

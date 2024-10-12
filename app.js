@@ -12,11 +12,7 @@ const app = express()
 const hbs = require('express-handlebars')
 
 app.set('view engine', 'hbs')
-app.set('views', [
-  path.join(__dirname, 'src/container'),
-  path.join(__dirname, 'src/layout'),
-  path.join(__dirname, 'src/component'),
-])
+app.set('views', 'src/container')
 app.engine(
   'hbs',
   hbs.engine({
@@ -26,8 +22,7 @@ app.engine(
     partialsDir: {
       dir: __dirname + '/src/component/',
       rename: (filePath) => {
-        const parts = filePath.split('/')
-        return parts[parts.length - 1].replace('.hbs', '')
+        return `${filePath.split('/')[0]}`
       },
     },
   }),

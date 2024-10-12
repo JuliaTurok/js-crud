@@ -1,0 +1,55 @@
+<div class="d-flex justify-content-center align-items-center mt-3 mb-5">{{> heading title="Мої замовлення"}}</div>
+
+<div class="container text-center" style="width: 100vw;">
+    {{#each data.list}}
+    <div class="row row-cols-xl-5 me-5">
+
+        <div class="col d-flex justify-content-center align-items-center">
+            ID: {{id}}
+        </div>
+        <div class="col">
+            <div class="row p-3">
+                <div class="col d-flex flex-column justify-content-between">
+                    <div>
+                        Товар
+                    </div>
+                    <div class="p-3">
+                        {{product.title}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row p-3">
+                <div class="col d-flex flex-column justify-content-between">
+                    <div>
+                        Сума замовлення:
+                    </div>
+                    <div class="p-3">
+                        {{totalPrice}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row p-3 d-flex flex-row">
+                <div class="col d-flex flex-column">
+                    <div>
+                        Нараховані бонуси
+                    </div>
+                    <div class="p-3">
+                        {{bonusAmount}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 d-flex justify-content-center align-items-center ms-3 mb-3">
+            <a href="/order-info?id={{id}}" class="btn btn-primary">Переглянути</a>
+        </div>
+
+
+    </div>
+    {{>divider }}
+
+    {{/each}}
+</div>

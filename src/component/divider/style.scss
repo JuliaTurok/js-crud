@@ -1,0 +1,6 @@
+@use '../../lib/service.scss' as s;
+
+.product-info_divider {
+  height: 2px;
+  background: s.color(border);
+}

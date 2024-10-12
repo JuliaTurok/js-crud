@@ -1,0 +1,6 @@
+<div class="mb-3 mt-3 {{#if disabled}}field--disabled{{/if}}">
+    <label for="{{name}}" class="form-label">{{label}}</label>
+    <input type="{{#if type}}{{type}}{{/if}}" value="{{#if value}}{{value}}{{/if}}" name="{{name}}"
+        class="form-control">
+    <div id="emailHelp" class="form-text"></div>
+</div>

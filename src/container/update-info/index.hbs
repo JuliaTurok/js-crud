@@ -1,0 +1,32 @@
+{{#with data}}
+<main class="main">
+    <div class="card" style="width: 50vw;">
+        <div class="card-body">
+            {{> heading title="Зміна даних замовлення" }}
+
+            <form action="/order-info" method="POST">
+                <input type="hidden" name="id" value="{{id}}">
+
+                <div class="row row-cols-lg-5 g-3 p-3">
+                    <div class="col-6 d-flex flex-column justify-content-evenly">
+                        {{>field label="Ім'я" name="firstname" value=firstname}}
+                    </div>
+                    <div class="col-6 d-flex flex-column justify-content-evenly">
+                        {{>field label="Прізвище" name="lastname" value=lastname}}
+                    </div>
+                    <div class="col-6 d-flex flex-column justify-content-evenly">
+                        {{>field label="Телефон" name="phone" value=phone}}
+                    </div>
+                    <div class="col-6 d-flex flex-column justify-content-evenly">
+                        {{>field label="Електронна пошта" name="email" value=email}}
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center m-3">
+                    <button type="submit" class="btn btn-primary button-change">Зберегти зміни</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{{/with}}
